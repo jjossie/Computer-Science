@@ -17,3 +17,4 @@ public class Lesson_12_FastStart {
 		System.out.println(str.get((int)(Math.random()*10)));
 	}
 }
+

@@ -24,7 +24,7 @@ class student_time_runner
 		Time t3 = new Time(9, 45);
 		System.out.println(t3.compareTo(t2));
 		System.out.println("Hours equal:");
-		Time t4 = new Time(8, 45);
+		Time t4 = new Time(9, 24);
 		Time t5 = new Time(8, 34);
 		System.out.println(t4.compareTo(t5));
 		System.out.println(t5.compareTo(t4));

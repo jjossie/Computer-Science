@@ -26,10 +26,6 @@ public class Time implements Comparable
             minute = m;
 
     }
-
-    /*
-     * Returns the time as a String of length 4 in the format: 0819.
-     */
     public String toString ()
     {
         String h = "";
@@ -61,22 +57,26 @@ public class Time implements Comparable
         }
         return x;
     }
-    public Time difference(Time t){
-        //x.hour = Math.abs(this.hour-t.hour);
-        //x.minute = Math.abs(this.minute-t.minute);
-        if(this.compareTo(t) == 1){
-            t.hour = this.hour - t.hour;
-            t.minute = this.minute - t.minute;
-        }else if(this.compareTo(t) == -1){
-            t.hour = t.hour - this.hour;
-            t.minute = t.minute - this.minute;
+    public String difference(Time t){
+        int hour = 0, minute = 0;
+        hour = Math.abs(this.hour - t.hour);
+        minute = Math.abs(this.minute - t.minute);
+        if(this.hour > t.hour && this.minute < t.minute){
+            minute = 60 - minute;
+            hour--;
+        }
+        if(this.hour < t.hour && this.minute > t.minute){
+            minute = 60 - minute;
+            hour --;
+
         }
 
         if (t.hour == this.hour && t.minute == this.minute){
-            t.hour = 0;
-            t.minute = 0;
+            hour = 0;
+            minute = 0;
         }
-        return t;
+        Time t2 = new Time(hour, minute);
+        return t2.toString();
     }
 
 }

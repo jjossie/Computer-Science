@@ -13,8 +13,13 @@ public class Lesson_12_FastStart {
 		str.add("29idk");
 		str.add("woiefj");
 		str.add("YOMOMMA");
-		System.out.println(str.get((int)(Math.random()*10)));
-		System.out.println(str.get((int)(Math.random()*10)));
+		int randStr1 = (int)(Math.random()*10);
+		int randStr2 = (int)(Math.random()*10);
+
+		while (randStr1 == randStr2)
+			randStr1 = (int)(Math.random()*10);
+		System.out.println(str.get(randStr1));
+		System.out.println(str.get(randStr2));
 	}
 }
 

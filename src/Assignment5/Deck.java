@@ -88,8 +88,21 @@ public class Deck
 	{
 
 		ArrayList <Card> t = new ArrayList <Card> ();
+		int[] indexes = new int[deck.size()];
+		for (int i = 0; i< indexes.length; i++){
+			indexes[i] = i;
+		}
+		for (int i = 0; i<deck.size(); i++){
+			int randIndex = (int)(Math.random()*deck.size());
+			boolean isvalid = false;
+			for(int n = 0; n<indexes.length; n++){
+				if(indexes[n] == randIndex)
+					isvalid = true;
+			}
+			t.add(i, deck.get(randIndex));
+			indexes[randIndex] = -1;
+		}
 
-		//your code here
 		return t;
 
 

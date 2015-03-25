@@ -25,11 +25,11 @@ public class Main {
 		}
 
 		//Print Stuff
-		System.out.println("Hand 1: total points: " + hand1Value);
+		System.out.println("Hand 1: total points " + hand1Value);
 		for (int i = 0; i<hand1.size(); i++){
 			System.out.println(hand1.get(i));
 		}
-		System.out.println("\nHand 2: total points: " + hand2Value);
+		System.out.println("\nHand 2: total points " + hand2Value);
 		for (int i = 0; i<hand2.size(); i++){
 			System.out.println(hand2.get(i));
 		}

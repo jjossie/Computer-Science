@@ -94,13 +94,13 @@ public class Deck
 		}
 		for (int i = 0; i<deck.size(); i++){
 			int randIndex = 0;
-			boolean isvalid = false;
-			while(!isvalid){
+			boolean isValid = false;
+			while(!isValid){
 				randIndex = (int)(Math.random()*deck.size());
 
 				for(int n = 0; n<indexes.length; n++){
 					if(indexes[n] == randIndex)
-						isvalid = true;
+						isValid = true;
 				}
 			}
 			t.add(i, deck.get(randIndex));

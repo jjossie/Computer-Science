@@ -25,4 +25,14 @@ public class Main {
 		}
 		return n;
 	}
+	public static ArrayList<String> sort(ArrayList<String> in){
+		ArrayList<String> out = new ArrayList<String>();
+		int pointer = 0;
+		boolean sorted = false;
+		while(!sorted){
+
+		}
+
+		return out;
+	}
 }

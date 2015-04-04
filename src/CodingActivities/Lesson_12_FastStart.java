@@ -1,3 +1,5 @@
+package CodingActivities;
+
 import java.util.ArrayList;
 import java.lang.Math;
 public class Lesson_12_FastStart {

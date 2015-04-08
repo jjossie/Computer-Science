@@ -22,11 +22,8 @@ public class Main {
 	}
 
 	public static ArrayList<String> sort(ArrayList<String> in){
-		ArrayList<String> out = new ArrayList<String>();
-		out = in;
-		int pointer = 1;
-		boolean sorted = false;
-		for (pointer = 1; pointer<in.size(); pointer ++){
+		ArrayList<String> out = in;
+		for (int pointer = 1; pointer<in.size(); pointer ++){
 
 			String currentString = in.get(pointer);
 

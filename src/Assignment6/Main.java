@@ -31,10 +31,10 @@ public class Main {
 			String currentString = in.get(pointer);
 
 			System.out.print("Pointer: " + pointer + " Current String: " + currentString + '\n');
-			for(int i = 0; i<=pointer; i++){
+			for(int i = pointer; i>=0; i--){
 				if(currentString.compareTo(out.get(i)) < 0 && currentString.compareTo(out.get(i+1)) >= 0) {
 					out.remove(pointer);
-					System.out.print( "Iteration: " + i + " Out after remove: " + out.toString() + " ");
+					System.out.print( "\tIteration: " + i + " Out after remove: " + out.toString() + " ");
 					out.add(i, currentString);
 					System.out.print("Out after add: " + out.toString() + "\n");
 					break;

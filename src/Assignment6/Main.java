@@ -1,9 +1,10 @@
 package Assignment6;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Main {
+
 	static ArrayList<String> names = new ArrayList<String>();
+
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
 		String in = "";
@@ -22,20 +23,23 @@ public class Main {
 		return s.substring(0,1).toUpperCase() + s.substring(1).toLowerCase();
 	}
 
-	/*public static ArrayList<String> sort(ArrayList<String> in){
-		ArrayList<String> out = in;
+
+//------------------------------BEHOLD THE ALMIGHTY NOT-SO-GREAT SORT FUNCTION THAT DOESN'T ACTUALLY WORK----------
+
+/*	public static ArrayList<String> sort(ArrayList<String> in){
+		ArrayList<String> in = in;
 		for (int pointer = 1; pointer<in.size(); pointer ++){
 
 			String currentString = in.get(pointer);
 
-			System.out.print("Pointer: " + pointer + " Current String: " + currentString + "\t" + out + '\n');
+			System.out.print("Pointer: " + pointer + " Current String: " + currentString + "\t" + in + '\n');
 			for(int i= 1; i<=pointer; i++){
-				System.out.print("\tIteration: " + i + "  " + currentString + " compared to " + out.get(i-1) + ": " + (currentString.compareTo(out.get(i-1))) + " and compared to "+  out.get(i) + ": " + currentString.compareTo(out.get(i)) + "\n") ;
-				if(currentString.compareTo(out.get(i-1)) > 0 && currentString.compareTo(out.get(i)) < 0) {
-					out.remove(pointer);
-					System.out.print( "    Out after remove: " + out.toString() + " ");
-					out.add(i-1, currentString);
-					System.out.print("Out after add: " + out.toString() + "\n");
+				System.out.print("\tIteration: " + i + "  " + currentString + " compared to " + in.get(i-1) + ": " + (currentString.compareTo(in.get(i-1))) + " and compared to "+  in.get(i) + ": " + currentString.compareTo(in.get(i)) + "\n") ;
+				if(currentString.compareTo(in.get(i-1)) > 0 && currentString.compareTo(in.get(i)) < 0) {
+					in.remove(pointer);
+					System.out.print( "    in after remove: " + in.toString() + " ");
+					in.add(i-1, currentString);
+					System.out.print("in after add: " + in.toString() + "\n");
 					break;
 				}
 			}
@@ -43,9 +47,29 @@ public class Main {
 
 		}
 
-		return out;
+		return in;
 	}*/
-	public static ArrayList<String> sort(ArrayList<String> inputArray){
+
+	public static ArrayList<String> sort(ArrayList<String> in){
+		for (int pointer = 1; pointer<in.size(); pointer ++){
+			String currentString = in.get(pointer);
+
+			for(int i= 1; i<=pointer; i++){
+
+				if(currentString.compareTo(in.get(i-1)) > 0 && currentString.compareTo(in.get(i)) < 0) {
+					in.remove(pointer);
+					in.add(i-1, currentString);
+					break;
+				}
+
+			}
+		}
+
+		return in;
+	}
+
+	//------------CHEATER CODE THAT DOESN'T ACTUALLY WORK THIS IS KINDA BS---------------
+	/*public static ArrayList<String> sort(ArrayList<String> inputArray){
 		int i,j;
 		String key;
 		for (j = 1; j < inputArray.size(); j++) {
@@ -64,6 +88,6 @@ public class Main {
 			inputArray.set(i+1, key);
 		}
 		return inputArray;
-	}
+	}*/
 
 }

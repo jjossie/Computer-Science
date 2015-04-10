@@ -56,9 +56,13 @@ public class Main {
 
 			for(int i= 1; i<=pointer; i++){
 
-				if(currentString.compareTo(in.get(i-1)) > 0 && currentString.compareTo(in.get(i)) < 0) {
+				if((currentString.compareTo(in.get(i-1)) < 0 && currentString.compareTo(in.get(i)) <= 0 && in.get(i-1).compareTo(in.get(i))<=0)) {
 					in.remove(pointer);
 					in.add(i-1, currentString);
+					break;
+				}else if (currentString.compareTo(in.get(0))<=0 ){
+					in.remove(pointer);
+					in.add(0, currentString);
 					break;
 				}
 
